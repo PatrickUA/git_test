@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+<head>
+    <script src="app.js"></script>
+    <script src="angular.js"></script> <!--offline version-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>AngularJS Lesson 1</title>
+	<meta charset="utf-8" />
+    <style>
+        div div {
+            margin: 30px;
+            padding: 5px;
+            width: 450px;
+            background-color: lightblue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Type 'World'" ng-model="text" />
+    <h1>Hello, {{text}}!</h1>
+    <div ng-controller="gamesCtrl">
+        <p>Мои любимые игры: {{games[0]}}, {{games[1]}}, {{games[2]}}.</p>
+    </div>
+    <div ng-controller="gamesInfoCtrl">
+        <div ng-repeat="games in info">
+            <p>Игра: {{games.name}}</p>
+            <p>Разработчик: {{games.developer}}</p>
+            <p>Steam: {{games.steam}}</p>
+        </div>
+    </div>
+</body> 
+</html>
